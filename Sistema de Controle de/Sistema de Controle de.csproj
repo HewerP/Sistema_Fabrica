@@ -176,28 +176,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="attestoque.cs">
+    <Compile Include="Telas\attestoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="attestoque.Designer.cs">
+    <Compile Include="Telas\attestoque.Designer.cs">
       <DependentUpon>attestoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="cadproducao.cs">
+    <Compile Include="Telas\cadproducao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cadproducao.Designer.cs">
+    <Compile Include="Telas\cadproducao.Designer.cs">
       <DependentUpon>cadproducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="cadcliente.cs">
+    <Compile Include="Telas\cadcliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cadcliente.Designer.cs">
+    <Compile Include="Telas\cadcliente.Designer.cs">
       <DependentUpon>cadcliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="cadoperario.cs">
+    <Compile Include="Telas\cadoperario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cadoperario.Designer.cs">
+    <Compile Include="Telas\cadoperario.Designer.cs">
       <DependentUpon>cadoperario.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSet1TableAdapters\cad_operario1TableAdapter.cs" />
@@ -207,176 +207,176 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="deleteproducao.cs">
+    <Compile Include="Telas\deleteproducao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="deleteproducao.Designer.cs">
+    <Compile Include="Telas\deleteproducao.Designer.cs">
       <DependentUpon>deleteproducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="editoperario.cs">
+    <Compile Include="Telas\editoperario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editoperario.Designer.cs">
+    <Compile Include="Telas\editoperario.Designer.cs">
       <DependentUpon>editoperario.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmextrusora.cs">
+    <Compile Include="Telas\fmextrusora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmextrusora.Designer.cs">
+    <Compile Include="Telas\fmextrusora.Designer.cs">
       <DependentUpon>fmextrusora.cs</DependentUpon>
     </Compile>
-    <Compile Include="fminicio.cs">
+    <Compile Include="Telas\fminicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fminicio.Designer.cs">
+    <Compile Include="Telas\fminicio.Designer.cs">
       <DependentUpon>fminicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmcadcadastrar.cs">
+    <Compile Include="Telas\fmcadcadastrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmcadcadastrar.Designer.cs">
+    <Compile Include="Telas\fmcadcadastrar.Designer.cs">
       <DependentUpon>fmcadcadastrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmcadestoque.cs">
+    <Compile Include="Telas\fmcadestoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmcadestoque.Designer.cs">
+    <Compile Include="Telas\fmcadestoque.Designer.cs">
       <DependentUpon>fmcadestoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmcadconsultar.cs">
+    <Compile Include="Telas\fmcadconsultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmcadconsultar.Designer.cs">
+    <Compile Include="Telas\fmcadconsultar.Designer.cs">
       <DependentUpon>fmcadconsultar.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmcadproducao.cs">
+    <Compile Include="Telas\fmcadproducao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmcadproducao.Designer.cs">
+    <Compile Include="Telas\fmcadproducao.Designer.cs">
       <DependentUpon>fmcadproducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmcadrelatorio.cs">
+    <Compile Include="Telas\fmcadrelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmcadrelatorio.Designer.cs">
+    <Compile Include="Telas\fmcadrelatorio.Designer.cs">
       <DependentUpon>fmcadrelatorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmlaminadora1.cs">
+    <Compile Include="Telas\fmlaminadora1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmlaminadora1.Designer.cs">
+    <Compile Include="Telas\fmlaminadora1.Designer.cs">
       <DependentUpon>fmlaminadora1.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmordemdeprdoucao.cs">
+    <Compile Include="Telas\fmordemdeprdoucao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmordemdeprdoucao.Designer.cs">
+    <Compile Include="Telas\fmordemdeprdoucao.Designer.cs">
       <DependentUpon>fmordemdeprdoucao.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmtecelagem.cs">
+    <Compile Include="Telas\fmtecelagem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmtecelagem.Designer.cs">
+    <Compile Include="Telas\fmtecelagem.Designer.cs">
       <DependentUpon>fmtecelagem.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmmenu.cs">
+    <Compile Include="Telas\fmmenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmmenu.Designer.cs">
+    <Compile Include="Telas\fmmenu.Designer.cs">
       <DependentUpon>fmmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="listaesto.cs">
+    <Compile Include="Telas\listaesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listaesto.Designer.cs">
+    <Compile Include="Telas\listaesto.Designer.cs">
       <DependentUpon>listaesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="listaproducao.cs">
+    <Compile Include="Telas\listaproducao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listaproducao.Designer.cs">
+    <Compile Include="Telas\listaproducao.Designer.cs">
       <DependentUpon>listaproducao.cs</DependentUpon>
     </Compile>
-    <Compile Include="pesquisaroperario.cs">
+    <Compile Include="Telas\pesquisaroperario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pesquisaroperario.Designer.cs">
+    <Compile Include="Telas\pesquisaroperario.Designer.cs">
       <DependentUpon>pesquisaroperario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="removeroperario.cs">
+    <Compile Include="Telas\removeroperario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="removeroperario.Designer.cs">
+    <Compile Include="Telas\removeroperario.Designer.cs">
       <DependentUpon>removeroperario.cs</DependentUpon>
     </Compile>
     <Compile Include="Sistema_de_Controle_de\DataSet1.cs" />
     <Compile Include="Sistema_de_Controle_de\DataSet1TableAdapters.cs" />
-    <Compile Include="telainicio.cs">
+    <Compile Include="Telas\telainicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telainicio.Designer.cs">
+    <Compile Include="Telas\telainicio.Designer.cs">
       <DependentUpon>telainicio.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="attestoque.resx">
+    <EmbeddedResource Include="Telas\attestoque.resx">
       <DependentUpon>attestoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cadproducao.resx">
+    <EmbeddedResource Include="Telas\cadproducao.resx">
       <DependentUpon>cadproducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cadcliente.resx">
+    <EmbeddedResource Include="Telas\cadcliente.resx">
       <DependentUpon>cadcliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cadoperario.resx">
+    <EmbeddedResource Include="Telas\cadoperario.resx">
       <DependentUpon>cadoperario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="deleteproducao.resx">
+    <EmbeddedResource Include="Telas\deleteproducao.resx">
       <DependentUpon>deleteproducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editoperario.resx">
+    <EmbeddedResource Include="Telas\editoperario.resx">
       <DependentUpon>editoperario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmextrusora.resx">
+    <EmbeddedResource Include="Telas\fmextrusora.resx">
       <DependentUpon>fmextrusora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fminicio.resx">
+    <EmbeddedResource Include="Telas\fminicio.resx">
       <DependentUpon>fminicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmcadcadastrar.resx">
+    <EmbeddedResource Include="Telas\fmcadcadastrar.resx">
       <DependentUpon>fmcadcadastrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmcadestoque.resx">
+    <EmbeddedResource Include="Telas\fmcadestoque.resx">
       <DependentUpon>fmcadestoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmcadconsultar.resx">
+    <EmbeddedResource Include="Telas\fmcadconsultar.resx">
       <DependentUpon>fmcadconsultar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmcadproducao.resx">
+    <EmbeddedResource Include="Telas\fmcadproducao.resx">
       <DependentUpon>fmcadproducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmcadrelatorio.resx">
+    <EmbeddedResource Include="Telas\fmcadrelatorio.resx">
       <DependentUpon>fmcadrelatorio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmlaminadora1.resx">
+    <EmbeddedResource Include="Telas\fmlaminadora1.resx">
       <DependentUpon>fmlaminadora1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmordemdeprdoucao.resx">
+    <EmbeddedResource Include="Telas\fmordemdeprdoucao.resx">
       <DependentUpon>fmordemdeprdoucao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmtecelagem.resx">
+    <EmbeddedResource Include="Telas\fmtecelagem.resx">
       <DependentUpon>fmtecelagem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmmenu.resx">
+    <EmbeddedResource Include="Telas\fmmenu.resx">
       <DependentUpon>fmmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listaesto.resx">
+    <EmbeddedResource Include="Telas\listaesto.resx">
       <DependentUpon>listaesto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listaproducao.resx">
+    <EmbeddedResource Include="Telas\listaproducao.resx">
       <DependentUpon>listaproducao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pesquisaroperario.resx">
+    <EmbeddedResource Include="Telas\pesquisaroperario.resx">
       <DependentUpon>pesquisaroperario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -389,10 +389,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="removeroperario.resx">
+    <EmbeddedResource Include="Telas\removeroperario.resx">
       <DependentUpon>removeroperario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="telainicio.resx">
+    <EmbeddedResource Include="Telas\telainicio.resx">
       <DependentUpon>telainicio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Core\Compression\Snappy\lib\linux\libsnappy64.so" />
