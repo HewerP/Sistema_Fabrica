@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{659F0DC8-1A6E-4758-BDEA-A9F0514C7BC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sistema_de_Controle_de</RootNamespace>
+    <AssemblyName>Sistema de Controle de</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.6.1\lib\net471\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.17.1\lib\net472\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.17.1\lib\net472\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.17.1\lib\net472\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Libmongocrypt, Version=1.5.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Libmongocrypt.1.5.5\lib\net472\MongoDB.Libmongocrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=6.0.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.6.0.7\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.30.1.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpCompress.0.30.1\lib\net461\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.6.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.6\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.6.0.0\lib\net461\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="attestoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attestoque.Designer.cs">
+      <DependentUpon>attestoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadproducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadproducao.Designer.cs">
+      <DependentUpon>cadproducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadcliente.Designer.cs">
+      <DependentUpon>cadcliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadoperario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadoperario.Designer.cs">
+      <DependentUpon>cadoperario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1TableAdapters\cad_operario1TableAdapter.cs" />
+    <Compile Include="DataSet1TableAdapters\cad_operarioTableAdapter.cs" />
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="deleteproducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteproducao.Designer.cs">
+      <DependentUpon>deleteproducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editoperario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editoperario.Designer.cs">
+      <DependentUpon>editoperario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmextrusora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmextrusora.Designer.cs">
+      <DependentUpon>fmextrusora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fminicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fminicio.Designer.cs">
+      <DependentUpon>fminicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmcadcadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmcadcadastrar.Designer.cs">
+      <DependentUpon>fmcadcadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmcadestoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmcadestoque.Designer.cs">
+      <DependentUpon>fmcadestoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmcadconsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmcadconsultar.Designer.cs">
+      <DependentUpon>fmcadconsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmcadproducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmcadproducao.Designer.cs">
+      <DependentUpon>fmcadproducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmcadrelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmcadrelatorio.Designer.cs">
+      <DependentUpon>fmcadrelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmlaminadora1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmlaminadora1.Designer.cs">
+      <DependentUpon>fmlaminadora1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmordemdeprdoucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmordemdeprdoucao.Designer.cs">
+      <DependentUpon>fmordemdeprdoucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmtecelagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmtecelagem.Designer.cs">
+      <DependentUpon>fmtecelagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmmenu.Designer.cs">
+      <DependentUpon>fmmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listaesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listaesto.Designer.cs">
+      <DependentUpon>listaesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listaproducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listaproducao.Designer.cs">
+      <DependentUpon>listaproducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pesquisaroperario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pesquisaroperario.Designer.cs">
+      <DependentUpon>pesquisaroperario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="removeroperario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="removeroperario.Designer.cs">
+      <DependentUpon>removeroperario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema_de_Controle_de\DataSet1.cs" />
+    <Compile Include="Sistema_de_Controle_de\DataSet1TableAdapters.cs" />
+    <Compile Include="telainicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telainicio.Designer.cs">
+      <DependentUpon>telainicio.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="attestoque.resx">
+      <DependentUpon>attestoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadproducao.resx">
+      <DependentUpon>cadproducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadcliente.resx">
+      <DependentUpon>cadcliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadoperario.resx">
+      <DependentUpon>cadoperario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteproducao.resx">
+      <DependentUpon>deleteproducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editoperario.resx">
+      <DependentUpon>editoperario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmextrusora.resx">
+      <DependentUpon>fmextrusora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fminicio.resx">
+      <DependentUpon>fminicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmcadcadastrar.resx">
+      <DependentUpon>fmcadcadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmcadestoque.resx">
+      <DependentUpon>fmcadestoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmcadconsultar.resx">
+      <DependentUpon>fmcadconsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmcadproducao.resx">
+      <DependentUpon>fmcadproducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmcadrelatorio.resx">
+      <DependentUpon>fmcadrelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmlaminadora1.resx">
+      <DependentUpon>fmlaminadora1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmordemdeprdoucao.resx">
+      <DependentUpon>fmordemdeprdoucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmtecelagem.resx">
+      <DependentUpon>fmtecelagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmmenu.resx">
+      <DependentUpon>fmmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listaesto.resx">
+      <DependentUpon>listaesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listaproducao.resx">
+      <DependentUpon>listaproducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pesquisaroperario.resx">
+      <DependentUpon>pesquisaroperario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="removeroperario.resx">
+      <DependentUpon>removeroperario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telainicio.resx">
+      <DependentUpon>telainicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Core\Compression\Snappy\lib\linux\libsnappy64.so" />
+    <None Include="Core\Compression\Snappy\lib\osx\libsnappy64.dylib" />
+    <None Include="Core\Compression\Zstandard\lib\linux\libzstd.so" />
+    <None Include="Core\Compression\Zstandard\lib\osx\libzstd.dylib" />
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\industria-pos-pandemia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sistema-de-produção.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02cebc5a1e3443ed83c941a4b53705cd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisa-de-lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisa-de-lupa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisa-de-lupa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-reproducao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dedos-de-espuma-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02cebc5a1e3443ed83c941a4b53705cd-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklistfacil-tipos-de-industria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simbolo-de-cadeado-para-interface-de-seguranca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relatorio5-e1515005139868.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
+    <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
+    <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
+    <None Include="Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo %282%291.png" />
+    <None Include="Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo %282%29.png" />
+    <None Include="Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo.png" />
+    <None Include="Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo %281%29.png" />
+    <None Include="Resources\rm309-aew-001.jpg" />
+    <None Include="Resources\cadeado.png" />
+    <None Include="Resources\do-utilizador.png" />
+    <None Include="Resources\fundo-industrial-196297683.jpg" />
+    <None Include="Resources\fundo-industrial-196297682.jpg" />
+    <None Include="Resources\fundo-industrial-196297681.jpg" />
+    <None Include="Resources\fundo-industrial-19629768.jpg" />
+    <None Include="Resources\png-clipart-computer-icons-user-icon-design-green-checkmark-with-circle-area-user.png" />
+    <None Include="Resources\kisspng-computer-icons-padlock-advertising-red-circle-5ac56d57b22395.3473021815228880237297.png" />
+    <None Include="Resources\pinpng.com-cabin-icon-png-4682069.png" />
+    <None Include="Resources\istockphoto-1162434010-170667a-removebg-preview1.png" />
+    <None Include="Resources\istockphoto-1162434010-170667a-removebg-preview.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\download1.jfif" />
+    <None Include="Resources\fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner_1258-63451.jpg" />
+    <None Include="Resources\download.jfif" />
+    <None Include="Resources\fundo-cinza-pintado-com-textura-de-metal_125540-7791.jpg" />
+    <None Include="Resources\fundo-abstrato-azul_1393-3391.jpg" />
+    <None Include="Resources\fundo-cinza-pintado-com-textura-de-metal_125540-779.jpg" />
+    <None Include="Resources\TotalAliveAquaticleech-mobile.jpg" />
+    <None Include="Resources\fundo-abstrato-azul_1393-339.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets'))" />
+    <Error Condition="!Exists('..\packages\MongoDB.Driver.Core.2.17.1\build\MongoDB.Driver.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MongoDB.Driver.Core.2.17.1\build\MongoDB.Driver.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets')" />
+  <Import Project="..\packages\MongoDB.Driver.Core.2.17.1\build\MongoDB.Driver.Core.targets" Condition="Exists('..\packages\MongoDB.Driver.Core.2.17.1\build\MongoDB.Driver.Core.targets')" />
+</Project>
