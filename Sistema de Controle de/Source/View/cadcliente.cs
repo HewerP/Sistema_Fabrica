@@ -112,5 +112,10 @@ namespace Sistema_de_Controle_de
         {
             this.Close();
         }
+
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
