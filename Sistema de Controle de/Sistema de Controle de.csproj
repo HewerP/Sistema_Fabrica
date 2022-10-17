@@ -176,12 +176,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Source\Model\Extrusao.cs" />
+    <Compile Include="Source\Model\Laminadora.cs" />
+    <Compile Include="Source\Model\Operario.cs" />
     <Compile Include="Source\Model\Cliente.cs" />
     <Compile Include="Source\Model\Data_Producao.cs" />
     <Compile Include="Source\Model\Endereco.cs" />
     <Compile Include="Source\Model\Estoque.cs" />
     <Compile Include="Source\Model\Movimentacao_Estoque.cs" />
+    <Compile Include="Source\Model\Ordem_Producao.cs" />
     <Compile Include="Source\Model\Producao.cs" />
+    <Compile Include="Source\Model\Status_Producao.cs" />
+    <Compile Include="Source\Model\Tecelagem.cs" />
     <Compile Include="Source\View\attestoque.cs">
       <SubType>Form</SubType>
     </Compile>
