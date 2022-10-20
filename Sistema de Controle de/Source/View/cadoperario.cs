@@ -33,7 +33,7 @@ namespace Sistema_de_Controle_de
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
 
             string sql = "INSERT INTO cad_operario(ID_OPER, NOME_OPER, TURNO_OPER, SETOR_OPER) VALUES(@id,@nome,@turno,@setor)";
             

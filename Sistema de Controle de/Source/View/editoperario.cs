@@ -106,5 +106,10 @@ namespace Sistema_de_Controle_de
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
