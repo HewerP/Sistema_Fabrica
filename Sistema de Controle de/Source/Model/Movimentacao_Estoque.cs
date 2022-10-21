@@ -6,44 +6,19 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_Controle_de.Source.Model
 {
-    internal class Movimentacao_Estoque
+    public class Movimentacao_Estoque
     {
-        private Estoque materiaPrima;
-        private string dataMovimentacao;
-        private string tipoProcesso;
+        public int Id { get; set; }
+        public Estoque MateriaPrima { get; set; }
+        public string DataMovimentacao { get; set; }
+        public string TipoProcesso { get; set; }
 
-        public Movimentacao_Estoque(Estoque materiaPrima, string dataMovimentacao, string tipoProcesso)
+        public Movimentacao_Estoque(int id, Estoque materiaPrima, string dataMovimentacao, string tipoProcesso)
         {
-            this.materiaPrima = materiaPrima;
-            this.dataMovimentacao = dataMovimentacao;
-            this.tipoProcesso = tipoProcesso;
-        }
-
-        public Estoque getMateriaPrima()
-        {
-            return materiaPrima;
-        }
-        public void setMateriaPrima(Estoque materiaPrima)
-        {
-            this.materiaPrima = materiaPrima;
-        }
-
-        public string getDataMovimentacao()
-        {
-            return dataMovimentacao;
-        }
-        public void setDataMovimentacao(string dataMovimentacao)
-        {
-            this.dataMovimentacao = dataMovimentacao;
-        }
-
-        public string getTipoProcesso()
-        {
-            return tipoProcesso;
-        }
-        public void setTipoProcesso(string tipoProcesso)
-        {
-            this.tipoProcesso = tipoProcesso;
+            Id = id;
+            MateriaPrima = materiaPrima;
+            DataMovimentacao = dataMovimentacao;
+            TipoProcesso = tipoProcesso;
         }
     }
 }

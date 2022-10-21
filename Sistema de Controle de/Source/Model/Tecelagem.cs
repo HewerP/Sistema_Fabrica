@@ -6,55 +6,20 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_Controle_de.Source.Model
 {
-    internal class Tecelagem:Producao
+    public class Tecelagem:Producao
     {
-        private string tear;
-        private double peso;
-        private double metragem;
-        private int tela;
 
-        public Tecelagem(int id, Data_Producao data, char turno, double producao, Estoque material, string tear, double peso, double metragem, int tela) : base(id, data, turno, producao, material)
-        {
-            this.tear = tear;
-            this.peso = peso;
-            this.metragem = metragem;
-            this.tela = tela;
-        }
+        public string Tear { get; set; }
+        public double Peso { get; set; }
+        public double Metragem { get; set; }
+        public int Tela { get; set; }
 
-        private string getTear()
+        public Tecelagem(int id, Data_Producao data, char turno, double quantidadeProduzida, Estoque material, string tear, double peso, double metragem, int tela) : base(id, data, turno, quantidadeProduzida, material)
         {
-            return tear;
-        }
-        private void setTear(string tear)
-        {
-            this.tear = tear;
-        }
-
-        private double getPeso()
-        {
-            return peso;
-        }
-        private void setPeso(double peso)
-        {
-            this.peso = peso;
-        }
-
-        private double getMetragem()
-        {
-            return metragem;
-        }
-        private void setMetragem(double metragem)
-        {
-            this.metragem = metragem;
-        }
-
-        private int getTela()
-        {
-            return tela;
-        }
-        private void setTela(int tela)
-        {
-            this.tela = tela;
+            Tear = tear;
+            Peso = peso;
+            Metragem = metragem;
+            Tela = tela;
         }
     }
 }

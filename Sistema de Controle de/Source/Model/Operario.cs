@@ -6,54 +6,19 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_Controle_de.Source.Model
 {
-    internal class Operario
+    public class Operario
     {
-        private int id;
-        private string nome;
-        private string turno;
-        private Producao setor;
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Turno { get; set; }
+        public Producao Setor { get; set; }
 
-        public Operario(int id, string nome, Producao setor)
+        public Operario(int id, string nome, string turno, Producao setor)
         {
-            this.id = id;
-            this.nome = nome;
-            this.setor = setor;
-        }
-
-        public int getID()
-        {
-            return id;
-        }
-        public void setID(int id)
-        {
-            this.id = id;
-        }
-
-        public string getNome()
-        {
-            return nome;
-        }
-        public void setNome(string nome)
-        {
-            this.nome = nome;
-        }
-
-        public string getTurno()
-        {
-            return turno;
-        }
-        public void setTurno(string turno)
-        {
-            this.turno = turno;
-        }
-
-        public Producao getSetor()
-        {
-            return setor;
-        }
-        public void setSetor(Producao setor)
-        {
-            this.setor = setor;
+            Id = id;
+            Nome = nome;
+            Turno = turno;
+            Setor = setor;
         }
     }
 }

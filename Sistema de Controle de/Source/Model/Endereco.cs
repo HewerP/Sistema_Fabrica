@@ -6,77 +6,25 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_Controle_de.Source.Model
 {
-    internal class Endereco
+    public class Endereco
     {
-        private string rua;
-        private int nCasa;
-        private string complemento;
-        private string bairro;
-        private string cidade;
-        private string estado;
+        public int Id { get; set; }
+        public string Rua { get; set; }
+        public int NCasa { get; set; }
+        public string Complemento { get; set; }
+        public string Bairro { get; set; }
+        public string Cidade { get; set; }
+        public string Estado { get; set; }
 
-        public Endereco(string rua, int nCasa, string complemento, string bairro, string cidade, string estado)
+        public Endereco(int id, string rua, int nCasa, string complemento, string bairro, string cidade, string estado)
         {
-            this.rua = rua;
-            this.nCasa = nCasa;
-            this.complemento = complemento;
-            this.bairro = bairro;
-            this.cidade = cidade;
-            this.estado = estado;
-        }
-
-        public string getRua()
-        {
-            return rua;
-        }
-        public void setRua(string rua)
-        {
-            this.rua = rua;
-        }
-
-        public int getNCasa()
-        {
-            return nCasa;
-        }
-        public void setNCasa(int nCasa)
-        {
-            this.nCasa = nCasa;
-        }
-
-        public string getComplemento()
-        {
-            return complemento;
-        }
-        public void setComplemento(string complemento)
-        {
-            this.complemento = complemento;
-        }
-
-        public string getBairro()
-        {
-            return bairro;
-        }
-        public void setBairro(string bairro)
-        {
-            this.bairro = bairro;
-        }
-
-        public string getCidade()
-        {
-            return cidade;
-        }
-        public void setCidade(string cidade)
-        {
-            this.cidade = cidade;
-        }
-
-        public string getEstado()
-        {
-            return estado;
-        }
-        public void setEstado(string estado)
-        {
-            this.estado = estado;
+            Id = id;
+            Rua = rua;
+            NCasa = nCasa;
+            Complemento = complemento;
+            Bairro = bairro;
+            Cidade = cidade;
+            Estado = estado;
         }
     }
 }
