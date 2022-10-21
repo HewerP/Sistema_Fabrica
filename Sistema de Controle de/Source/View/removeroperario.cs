@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Sistema_de_Controle_de
 {
@@ -27,13 +28,22 @@ namespace Sistema_de_Controle_de
         {
 
 
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
 
-            
+            int item = 0;
 
-            
+            item = dataGridView1.CurrentRow.Index;
+
+            SqlCommand cmd = new SqlCommand("delete FROM cad_operario where ID_OPER =@id", conn);
+            cmd.Parameters.AddWithValue("@id", dataGridView1.Rows[item].Cells[0].Value);
 
 
+            conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                MessageBox.Show("Dados removido");
+            atualizarGrid();
 
 
         }
@@ -52,18 +62,20 @@ namespace Sistema_de_Controle_de
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            atualizarGrid();
+        }
 
-
+        public void atualizarGrid()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
 
             try
             {
-           
-                    conn.Open();
+                conn.Open();
 
-                    string sql = "SELECT * FROM cad_operario";
+                string sql = "SELECT * FROM cad_operario";
 
-                using(SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+                using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
                 {
                     using (DataTable dt = new DataTable())
                     {
@@ -71,12 +83,6 @@ namespace Sistema_de_Controle_de
                         dataGridView1.DataSource = dt;
                     }
                 }
-                
-               
-
-                
-
-
             }
             catch (SqlException ex)
             {
@@ -86,12 +92,6 @@ namespace Sistema_de_Controle_de
             {
                 conn.Close();
             }
-
-
-
-
-
-
         }
     }
 }
