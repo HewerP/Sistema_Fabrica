@@ -22,12 +22,12 @@ namespace Sistema_de_Controle_de
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
           
 
 
 
-            for (int item = 0; item <= dataGridView1.Rows.Count-1; item++)
+            for (int item = 0; item <= dataGridView1.CurrentRow.Index; item++)
             {
                 SqlCommand cmd = new SqlCommand("UPDATE cad_operario SET ID_OPER = @id, NOME_OPER=@nome, TURNO_OPER=@turno,SETOR_OPER=@setor WHERE NOME_OPER='" + textBox1.Text+ "'", conn);
                 cmd.Parameters.AddWithValue("@nome", dataGridView1.Rows[item].Cells[1].Value);
@@ -55,7 +55,7 @@ namespace Sistema_de_Controle_de
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
 
 
 
