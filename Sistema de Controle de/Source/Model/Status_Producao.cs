@@ -8,6 +8,7 @@ namespace Sistema_de_Controle_de.Source.Model
 {
     public class Status_Producao
     {
+        public int Id { get; set; }
         public Ordem_Producao Id_producao { get; set; }
         public string EtapaProducao { get; set; }
         public string InicioEtapa { get; set; }

@@ -11,14 +11,14 @@ namespace Sistema_de_Controle_de.Source.Model
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Turno { get; set; }
-        public Producao Setor { get; set; }
+        public string Setor { get; set; }
 
-        public Operario(int id, string nome, string turno, Producao setor)
+        /*public Operario(int id, string nome, string turno, string setor)
         {
             Id = id;
             Nome = nome;
             Turno = turno;
             Setor = setor;
-        }
+        }*/
     }
 }
