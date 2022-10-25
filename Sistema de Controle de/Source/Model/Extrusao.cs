@@ -12,8 +12,9 @@ namespace Sistema_de_Controle_de.Source.Model
         public double Velocidade { get; set; }
         public string Maquina { get; set; }
         public double Refugo { get; set; }
+        
 
-        public Extrusao(int id, Data_Producao data, char turno, double quantidadeProduzida, Estoque material, double velocidade, string maquina, double refugo) : base(id, data, turno, quantidadeProduzida, material)
+        public Extrusao(Data_Producao data, char turno, double quantidadeProduzida, Estoque material, double velocidade, string maquina, double refugo) : base(data, turno, quantidadeProduzida, material)
         {
             Velocidade = velocidade;
             Maquina = maquina;

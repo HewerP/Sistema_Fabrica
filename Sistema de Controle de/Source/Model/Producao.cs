@@ -14,9 +14,9 @@ namespace Sistema_de_Controle_de.Source.Model
         public double QuantidadeProduzida { get; set; }
         public Estoque Material { get; set; }
 
-        public Producao(int id, Data_Producao data, char turno, double quantidadeProduzida, Estoque material)
+        public Producao( Data_Producao data, char turno, double quantidadeProduzida, Estoque material)
         {
-            this.Id = id;
+            //this.Id = id;
             this.Data = data;
             this.Turno = turno;
             this.QuantidadeProduzida = quantidadeProduzida;

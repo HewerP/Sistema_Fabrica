@@ -14,13 +14,13 @@ namespace Sistema_de_Controle_de.Source.Model
         public string HorarioEntrada { get; set; }
         public string HorarioSaida { get; set; }
 
-        public Data_Producao(int id, string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida)
+        /*public Data_Producao(int id, string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida)
         {
             Id = id;
             DataInicio = dataInicio;
             DataTermino = dataTermino;
             HorarioEntrada = horarioEntrada;
             HorarioSaida = horarioSaida;
-        }
+        }*/
     }
 }
