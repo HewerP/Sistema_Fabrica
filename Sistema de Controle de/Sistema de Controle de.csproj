@@ -228,6 +228,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source\Context\Nomus System.cs" />
+    <Compile Include="Source\Controller\OperarioController.cs" />
     <Compile Include="Source\Model\Extrusao.cs" />
     <Compile Include="Source\Model\Laminadora.cs" />
     <Compile Include="Source\Model\Operario.cs" />
@@ -585,9 +586,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Source\Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_de_Controle_de.Source.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Sistema_de_Controle_de
         public pesquisaroperario()
         {
             InitializeComponent();
+            listarOperario();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,50 +32,19 @@ namespace Sistema_de_Controle_de
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            OperarioController operarioController = new OperarioController();
 
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = operarioController.buscarOperario(textBox1.Text);
 
+            textBox1.Text = "";
 
-          
+        }
+        private void listarOperario()
+        {
+            OperarioController operarioController = new OperarioController();
 
-
-
-            try
-            {
-
-                conn.Open();
-
-                string sql = "SELECT * FROM cad_operario WHERE NOME_OPER='"+textBox1.Text + "'";
-
-                using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
-                {
-                    using (DataTable dt = new DataTable())
-                    {
-                        da.Fill(dt);
-                        dataGridView1.DataSource = dt;
-                    }
-                }
-
-
-
-
-
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-
-
-
-
-
+            dataGridView1.DataSource = operarioController.listarOperario();
         }
 
         private void button2_Click(object sender, EventArgs e)

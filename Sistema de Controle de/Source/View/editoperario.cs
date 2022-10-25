@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sistema_de_Controle_de.Source.Controller;
 
 
 namespace Sistema_de_Controle_de
@@ -18,28 +19,23 @@ namespace Sistema_de_Controle_de
         public editoperario()
         {
             InitializeComponent();
+            listarOperario();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
-          
-
-
+            //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
 
             for (int item = 0; item <= dataGridView1.CurrentRow.Index; item++)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE cad_operario SET ID_OPER = @id, NOME_OPER=@nome, TURNO_OPER=@turno,SETOR_OPER=@setor WHERE NOME_OPER='" + textBox1.Text+ "'", conn);
-                cmd.Parameters.AddWithValue("@nome", dataGridView1.Rows[item].Cells[1].Value);
-                cmd.Parameters.AddWithValue("@turno", dataGridView1.Rows[item].Cells[2].Value);
-                cmd.Parameters.AddWithValue("@setor", dataGridView1.Rows[item].Cells[3].Value);
-                cmd.Parameters.AddWithValue("@id", dataGridView1.Rows[item].Cells[0].Value);
+                OperarioController operarioController = new OperarioController();
 
+                int id = Convert.ToInt32(dataGridView1.Rows[item].Cells[0].Value.ToString());
+                string nome = dataGridView1.Rows[item].Cells[1].Value.ToString();
+                string turno = dataGridView1.Rows[item].Cells[2].Value.ToString();
+                string setor = dataGridView1.Rows[item].Cells[3].Value.ToString();
 
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-               
+                operarioController.atualizarOperario(id, nome, setor, turno);
 
             }
 
@@ -55,50 +51,12 @@ namespace Sistema_de_Controle_de
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            OperarioController operarioController = new OperarioController();
 
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = operarioController.buscarOperario(textBox1.Text);
 
-
-
-
-
-
-            try
-            {
-
-                conn.Open();
-
-                string sql = "SELECT * FROM cad_operario WHERE NOME_OPER='" + textBox1.Text + "'";
-
-                using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
-                {
-                    using (DataTable dt = new DataTable())
-                    {
-                        da.Fill(dt);
-                        dataGridView1.DataSource = dt;
-                    }
-                }
-
-
-
-
-
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-
-
-
-
-
+            textBox1.Text = "";
 
         }
 
@@ -110,6 +68,13 @@ namespace Sistema_de_Controle_de
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void listarOperario()
+        {
+            OperarioController operarioController = new OperarioController();
+
+            dataGridView1.DataSource = operarioController.listarOperario();
         }
     }
 }

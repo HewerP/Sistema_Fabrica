@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_de_Controle_de.Source.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace Sistema_de_Controle_de
         public removeroperario()
         {
             InitializeComponent();
+            atualizarGrid();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -26,23 +28,13 @@ namespace Sistema_de_Controle_de
 
         private void button1_Click(object sender, EventArgs e)
         {
+            OperarioController operarioController = new OperarioController();
 
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
 
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            operarioController.deletarOperario(id);
 
-            int item = 0;
-
-            item = dataGridView1.CurrentRow.Index;
-
-            SqlCommand cmd = new SqlCommand("delete FROM cad_operario where ID_OPER =@id", conn);
-            cmd.Parameters.AddWithValue("@id", dataGridView1.Rows[item].Cells[0].Value);
-
-
-            conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
-                MessageBox.Show("Dados removido");
+            MessageBox.Show("Dados removido");
             atualizarGrid();
 
 
@@ -67,31 +59,9 @@ namespace Sistema_de_Controle_de
 
         public void atualizarGrid()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L541QP2\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            OperarioController operarioController = new OperarioController();
 
-            try
-            {
-                conn.Open();
-
-                string sql = "SELECT * FROM cad_operario";
-
-                using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
-                {
-                    using (DataTable dt = new DataTable())
-                    {
-                        da.Fill(dt);
-                        dataGridView1.DataSource = dt;
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            dataGridView1.DataSource = operarioController.listarOperario();
         }
     }
 }
