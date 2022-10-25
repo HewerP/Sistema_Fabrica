@@ -55,6 +55,7 @@ namespace Sistema_de_Controle_de
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = operarioController.buscarOperario(textBox1.Text);
+            MessageBox.Show("Dados atualizados");
 
             textBox1.Text = "";
 

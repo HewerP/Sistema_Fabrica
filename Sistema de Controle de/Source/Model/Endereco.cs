@@ -16,7 +16,7 @@ namespace Sistema_de_Controle_de.Source.Model
         public string Cidade { get; set; }
         public string Estado { get; set; }
 
-        public Endereco(int id, string rua, int nCasa, string complemento, string bairro, string cidade, string estado)
+        /*public Endereco(int id, string rua, int nCasa, string complemento, string bairro, string cidade, string estado)
         {
             Id = id;
             Rua = rua;
@@ -25,6 +25,6 @@ namespace Sistema_de_Controle_de.Source.Model
             Bairro = bairro;
             Cidade = cidade;
             Estado = estado;
-        }
+        }*/
     }
 }

@@ -16,14 +16,13 @@ namespace Sistema_de_Controle_de.Source.Model
         public string DataNascimento { get; set; }
         public Endereco Endereco { get; set; }
 
-        public Cliente(int id, string nome, string telefone, string email, string dataNascimento, Endereco endereco)
+        /*public Cliente(string nome, string telefone, string email, string dataNascimento, Endereco endereco)
         {
-            Id = Id;
             Nome = nome;
             Telefone = telefone;
             Email = email;
             DataNascimento = dataNascimento;
             Endereco = endereco;
-        }
+        }*/
     }
 }
