@@ -14,7 +14,7 @@ namespace Sistema_de_Controle_de.Source.Model
         public double Metragem { get; set; }
         public int Tela { get; set; }
 
-        public Tecelagem(int id, Data_Producao data, char turno, double quantidadeProduzida, Estoque material, string tear, double peso, double metragem, int tela) : base(id, data, turno, quantidadeProduzida, material)
+        public Tecelagem( Data_Producao data, char turno, double quantidadeProduzida, Estoque material, string tear, double peso, double metragem, int tela) : base(data, turno, quantidadeProduzida, material)
         {
             Tear = tear;
             Peso = peso;

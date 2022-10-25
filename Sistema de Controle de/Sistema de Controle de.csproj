@@ -230,6 +230,7 @@
     <Compile Include="Source\Context\Nomus System.cs" />
     <Compile Include="Source\Controller\LaminadoraController.cs" />
     <Compile Include="Source\Controller\ClienteController.cs" />
+    <Compile Include="Source\Controller\ExtrusaoController.cs" />
     <Compile Include="Source\Controller\OperarioController.cs" />
     <Compile Include="Source\Model\Extrusao.cs" />
     <Compile Include="Source\Model\Laminadora.cs" />
