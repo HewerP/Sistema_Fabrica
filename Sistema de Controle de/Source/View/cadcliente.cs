@@ -66,26 +66,7 @@ namespace Sistema_de_Controle_de
             string cidade = this.maskedTextBox9.Text;
             string estado = this.comboBox1.Text;
 
-            
-
-            /*
-            
-                c.Parameters.Add(new SqlParameter("nome", this.textBox1.Text));
-                c.Parameters.Add(new SqlParameter("@data", this.maskedTextBox1.Text));
-                c.Parameters.Add(new SqlParameter("@telefone", this.maskedTextBox2.Text));
-                c.Parameters.Add(new SqlParameter("@email", this.maskedTextBox3.Text));
-                c.Parameters.Add(new SqlParameter("@rua", this.maskedTextBox4.Text));
-                c.Parameters.Add(new SqlParameter("@nmr", this.maskedTextBox5.Text));
-                c.Parameters.Add(new SqlParameter("@complemento", this.maskedTextBox6.Text));
-                c.Parameters.Add(new SqlParameter("@bairro", this.maskedTextBox7.Text));
-                c.Parameters.Add(new SqlParameter("@cidade", this.maskedTextBox9.Text));
-                c.Parameters.Add(new SqlParameter("@uf", this.comboBox1.Text));
-
-                conn.Open();
-
-                c.ExecuteNonQuery();
-
-                conn.Close();*/
+            clienteController.inserirCliente(nome, telefone, email, dataNascimento, rua, nCasa, complemento, bairro, cidade, estado);
 
             MessageBox.Show("Cadastro efetuado com sucesso");
             
