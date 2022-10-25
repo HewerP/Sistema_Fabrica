@@ -30,6 +30,7 @@ namespace Sistema_de_Controle_de
         {
             OperarioController operarioController = new OperarioController();
             operarioController.inserirOperario(this.textBox2.Text, this.comboBox2.Text, this.comboBox1.Text);
+            MessageBox.Show("Cadastro efetuado com sucesso");
 
             textBox1.Text = "";
             textBox2.Text = "";

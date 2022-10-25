@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sistema_de_Controle_de.Source.Controller;
+using Sistema_de_Controle_de.Source.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,15 +53,23 @@ namespace Sistema_de_Controle_de
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            ClienteController clienteController = new ClienteController();
 
-            string sql = "INSERT INTO cad_cliente(NOME_CLI, DATA_CLI, TELE_CLI, EMAIL_CLI,RUA_CLI,NUMCASA_CLI,COMPLE_CLI,BAIRRO_CLI,CIDADE_CLI,UF_CLI) VALUES(@nome,@data,@telefone,@email, @rua, @nmr, @complemento, @bairro, @cidade, @uf)";
+            string nome = this.textBox1.Text;
+            string telefone = this.maskedTextBox2.Text;
+            string email = this.maskedTextBox3.Text;
+            string dataNascimento = this.maskedTextBox1.Text;
+            string rua = this.maskedTextBox4.Text;
+            int nCasa = Convert.ToInt32(this.maskedTextBox5.Text);
+            string complemento = this.maskedTextBox6.Text;
+            string bairro = this.maskedTextBox7.Text;
+            string cidade = this.maskedTextBox9.Text;
+            string estado = this.comboBox1.Text;
 
+            
 
-
-            try
-            {
-                SqlCommand c = new SqlCommand(sql, conn);
+            /*
+            
                 c.Parameters.Add(new SqlParameter("nome", this.textBox1.Text));
                 c.Parameters.Add(new SqlParameter("@data", this.maskedTextBox1.Text));
                 c.Parameters.Add(new SqlParameter("@telefone", this.maskedTextBox2.Text));
@@ -75,18 +85,10 @@ namespace Sistema_de_Controle_de
 
                 c.ExecuteNonQuery();
 
-                conn.Close();
+                conn.Close();*/
 
-                MessageBox.Show("Cadastro efetuado com sucesso");
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            MessageBox.Show("Cadastro efetuado com sucesso");
+            
 
             textBox1.Text = "";
             maskedTextBox1.Text = "";
