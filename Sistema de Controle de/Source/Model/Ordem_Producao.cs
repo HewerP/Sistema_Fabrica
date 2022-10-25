@@ -13,7 +13,7 @@ namespace Sistema_de_Controle_de.Source.Model
         public string ItemPedido { get; set; }
         public int Tela { get; set; }
 
-        public Ordem_Producao(int id, Data_Producao data, char turno, double quantidadeProduzida, Estoque material, Cliente cliente, double quantidadeParaProduzir, string itemPedido, int tela) : base(id, data, turno, quantidadeProduzida, material)
+        public Ordem_Producao(Data_Producao data, char turno, double quantidadeProduzida, Estoque material, Cliente cliente, double quantidadeParaProduzir, string itemPedido, int tela) : base(data, turno, quantidadeProduzida, material)
         {
             Cliente = cliente;
             QuantidadeParaProduzir = quantidadeParaProduzir;

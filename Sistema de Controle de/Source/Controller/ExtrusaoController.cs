@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Sistema_de_Controle_de.Source.Controller
 {
     internal class ExtrusaoController
     {
-
+        
         public void inserirExtrusao(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, double velocidade, string maquina, double refugo)
         {
             using (var tb = new Nomus_System())
@@ -22,17 +23,18 @@ namespace Sistema_de_Controle_de.Source.Controller
             }
         }
 
-        public void deletarOperario(int id)
+        public void deletarExtrusao(int id)
         {
             using (var tb = new Nomus_System())
             {
-                var operario = tb.Operarios.Find(id);
+                var extrusao = tb.Extrusoes.Find(id);
 
-                tb.Operarios.Remove(operario);
+                tb.Extrusoes.Remove(extrusao);
                 tb.SaveChanges();
             }
         }
 
+        //atualizar ainda n ta feito.
         public void atualizarOperario(int id, string nome, string setor, string turno)
         {
             using (var tb = new Nomus_System())
@@ -48,28 +50,28 @@ namespace Sistema_de_Controle_de.Source.Controller
             }
         }
 
-        public object listarOperario()
+        public object listarExtrusao()
         {
             using (var tb = new Nomus_System())
             {
-                var list = tb.Operarios.ToList();
+                var list = tb.Extrusoes.ToList();
                 return list;
             }
         }
 
-        public object buscarOperario(string nome)
+        public object buscarOperario(string maquina)
         {
             using (var tb = new Nomus_System())
             {
-                List<Operario> list;
+                List<Extrusao> list;
 
-                if (!String.IsNullOrEmpty(nome))
+                if (!String.IsNullOrEmpty(maquina))
                 {
-                    list = tb.Operarios.Where(x => x.Nome == nome).AsEnumerable().ToList();
+                    list = tb.Extrusoes.Where(x => x.Maquina == maquina).AsEnumerable().ToList();
                 }
                 else
                 {
-                    list = tb.Operarios.ToList();
+                    list = tb.Extrusoes.ToList();
                 }
 
                 return list;
