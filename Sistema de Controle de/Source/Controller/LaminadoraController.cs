@@ -12,13 +12,13 @@ namespace Sistema_de_Controle_de.Source.Controller
     internal class LaminadoraController
     {
 
-        public void inserirLaminadora(string nome, string telefone, string email, string dataNascimento, string rua, int nCasa, string complemento, string bairro, string cidade, string estado)
+        public void inserirLaminadora(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, double pesoEntrada, double pesoSaida, double gramaturaEntrada, double gramaturaSaida, double metragem, int tela)
         {
             using (var tb = new Nomus_System())
             {
-                Endereco endereco = new Endereco { Rua = rua, NCasa = nCasa, Complemento = complemento, Bairro = bairro, Cidade = cidade, Estado = estado };
-                tb.Enderecos.Add(endereco);
-                tb.Clientes.Add(new Cliente { Nome = nome, Telefone = telefone, Email = email, DataNascimento = dataNascimento, Endereco = endereco });
+                Data_Producao data_Producao = new Data_Producao { DataInicio = dataInicio, DataTermino = dataTermino, HorarioEntrada = horarioEntrada, HorarioSaida = horarioSaida };
+                tb.Datas_Producoes.Add(data_Producao);
+                tb.Laminadoras.Add(new Laminadora(data_Producao, turno, quantidadeProduzida, material, pesoEntrada, pesoSaida, gramaturaEntrada, gramaturaSaida, metragem, tela));
                 tb.SaveChanges();
             }
         }
@@ -27,31 +27,35 @@ namespace Sistema_de_Controle_de.Source.Controller
         {
             using (var tb = new Nomus_System())
             {
-                var cliente = tb.Clientes.Find(id);
+                var laminadora = tb.Laminadoras.Find(id);
 
-                tb.Clientes.Remove(cliente);
+                tb.Laminadoras.Remove(laminadora);
                 tb.SaveChanges();
             }
         }
 
-        public void atualizarLaminadora(int id, string nome, string telefone, string email, string dataNascimento, string rua, int nCasa, string complemento, string bairro, string cidade, string estado)
+        public void atualizarLaminadora(int id, string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, double pesoEntrada, double pesoSaida, double gramaturaEntrada, double gramaturaSaida, double metragem, int tela)
         {
             using (var tb = new Nomus_System())
             {
-                var cliente = tb.Clientes.Find(id);
+                var laminadora = tb.Laminadoras.Find(id);
 
-                cliente.Nome = nome;
-                cliente.Telefone = telefone;
-                cliente.Email = email;
-                cliente.DataNascimento = dataNascimento;
-                cliente.Endereco.Rua = rua;
-                cliente.Endereco.NCasa = nCasa;
-                cliente.Endereco.Complemento = complemento;
-                cliente.Endereco.Bairro = bairro;
-                cliente.Endereco.Cidade = cidade;
-                cliente.Endereco.Estado = estado;
 
-                tb.Entry(cliente).State = EntityState.Modified;
+                laminadora.Data.DataInicio = dataInicio;
+                laminadora.Data.DataTermino = dataTermino;
+                laminadora.Data.HorarioEntrada = horarioEntrada;
+                laminadora.Data.HorarioSaida = horarioSaida;
+                laminadora.Turno = turno;
+                laminadora.QuantidadeProduzida = quantidadeProduzida;
+                laminadora.Material = material;
+                laminadora.PesoEntrada = pesoEntrada;
+                laminadora.PesoSaida = pesoSaida;
+                laminadora.GramaturaEntrada = gramaturaEntrada;
+                laminadora.GramaturaSaida = gramaturaSaida;
+                laminadora.Metragem = metragem;
+                laminadora.Tela = tela;
+
+                tb.Entry(laminadora).State = EntityState.Modified;
                 tb.SaveChanges();
             }
         }
@@ -60,24 +64,24 @@ namespace Sistema_de_Controle_de.Source.Controller
         {
             using (var tb = new Nomus_System())
             {
-                var list = tb.Clientes.ToList();
+                var list = tb.Laminadoras.ToList();
                 return list;
             }
         }
 
-        public object buscarLaminadora(string nome)
+        public object buscarLaminadora(int id)
         {
             using (var tb = new Nomus_System())
             {
-                List<Cliente> list;
+                List<Laminadora> list;
 
-                if (!String.IsNullOrEmpty(nome))
+                if (id != 0)
                 {
-                    list = tb.Clientes.Where(x => x.Nome == nome).AsEnumerable().ToList();
+                    list = tb.Laminadoras.Where(x => x.Id == id).AsEnumerable().ToList();
                 }
                 else
                 {
-                    list = tb.Clientes.ToList();
+                    list = tb.Laminadoras.ToList();
                 }
 
                 return list;
