@@ -11,7 +11,7 @@ namespace Sistema_de_Controle_de.Source.Controller
 {
     internal class TecelagemController
     {
-        public void inserirtTecelagem(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, string tear, double peso, double metragem, int tela)
+        public void inserirTecelagem(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, string tear, double peso, double metragem, int tela)
         {
             using (var tb = new Nomus_System())
             {
