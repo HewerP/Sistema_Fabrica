@@ -9,33 +9,32 @@ using System.Data.Entity;
 
 namespace Sistema_de_Controle_de.Source.Controller
 {
-    internal class ExtrusaoController
+    internal class TecelagemController
     {
-        
-        public void inserirExtrusao(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, double velocidade, string maquina, double refugo)
+        public void inserirtTecelagem(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, string tear, double peso, double metragem, int tela)
         {
             using (var tb = new Nomus_System())
             {
                 Data_Producao data_Producao = new Data_Producao { DataInicio = dataInicio, DataTermino = dataTermino, HorarioEntrada = horarioEntrada, HorarioSaida = horarioSaida };
                 tb.Datas_Producoes.Add(data_Producao);
-                tb.Extrusoes.Add(new Extrusao(data_Producao, turno, quantidadeProduzida, material, velocidade, maquina, refugo));
+                tb.Tecelagens.Add(new Tecelagem(data_Producao, turno, quantidadeProduzida, material, tear, peso, metragem, tela));
                 tb.SaveChanges();
             }
         }
 
-        public void deletarExtrusao(int id)
+        public void deletarTecelagem(int id)
         {
             using (var tb = new Nomus_System())
             {
-                var extrusao = tb.Extrusoes.Find(id);
+                var tecelagem = tb.Tecelagens.Find(id);
 
-                tb.Extrusoes.Remove(extrusao);
+                tb.Tecelagens.Remove(tecelagem);
                 tb.SaveChanges();
             }
         }
 
         //atualizar ainda n ta feito.
-        public void atualizarOperario(int id, string nome, string setor, string turno)
+        public void atualizarTecelagem(int id, string nome, string setor, string turno)
         {
             using (var tb = new Nomus_System())
             {
@@ -50,33 +49,32 @@ namespace Sistema_de_Controle_de.Source.Controller
             }
         }
 
-        public object listarExtrusao()
+        public object listarTecelagem()
         {
             using (var tb = new Nomus_System())
             {
-                var list = tb.Extrusoes.ToList();
+                var list = tb.Tecelagens.ToList();
                 return list;
             }
         }
 
-        public object buscarExtrusao(string maquina)
+        public object buscarTecelagem(int id)
         {
             using (var tb = new Nomus_System())
             {
-                List<Extrusao> list;
+                List<Tecelagem> list;
 
-                if (!String.IsNullOrEmpty(maquina))
+                if (id !=0)
                 {
-                    list = tb.Extrusoes.Where(x => x.Maquina == maquina).AsEnumerable().ToList();
+                    list = tb.Tecelagens.Where(x => x.Id == id).AsEnumerable().ToList();
                 }
                 else
                 {
-                    list = tb.Extrusoes.ToList();
+                    list = tb.Tecelagens.ToList();
                 }
 
                 return list;
             }
         }
-
     }
 }

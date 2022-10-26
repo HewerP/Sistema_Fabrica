@@ -232,6 +232,7 @@
     <Compile Include="Source\Controller\ClienteController.cs" />
     <Compile Include="Source\Controller\ExtrusaoController.cs" />
     <Compile Include="Source\Controller\OperarioController.cs" />
+    <Compile Include="Source\Controller\TecelagemController.cs" />
     <Compile Include="Source\Model\Extrusao.cs" />
     <Compile Include="Source\Model\Laminadora.cs" />
     <Compile Include="Source\Model\Operario.cs" />
