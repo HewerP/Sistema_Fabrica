@@ -35,17 +35,24 @@ namespace Sistema_de_Controle_de.Source.Controller
         }
 
         //atualizar ainda n ta feito.
-        public void atualizarOperario(int id, string nome, string setor, string turno)
+        public void atualizarExtrusao(int id, string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, double velocidade, string maquina, double refugo)
         {
             using (var tb = new Nomus_System())
             {
-                var operario = tb.Operarios.Find(id);
+                var extrusao = tb.Extrusoes.Find(id);
 
-                operario.Nome = nome;
-                operario.Setor = setor;
-                operario.Turno = turno;
+                extrusao.Data.DataInicio = dataInicio;
+                extrusao.Data.DataTermino = dataTermino;
+                extrusao.Data.HorarioEntrada = horarioEntrada;
+                extrusao.Data.HorarioSaida = horarioSaida;
+                extrusao.Turno = turno;
+                extrusao.QuantidadeProduzida = quantidadeProduzida;
+                extrusao.Material = material;
+                extrusao.Velocidade = velocidade;
+                extrusao.Maquina = maquina;
+                extrusao.Refugo = refugo;
 
-                tb.Entry(operario).State = EntityState.Modified;
+                tb.Entry(extrusao).State = EntityState.Modified;
                 tb.SaveChanges();
             }
         }
@@ -59,15 +66,15 @@ namespace Sistema_de_Controle_de.Source.Controller
             }
         }
 
-        public object buscarExtrusao(string maquina)
+        public object buscarExtrusao(int id)
         {
             using (var tb = new Nomus_System())
             {
                 List<Extrusao> list;
 
-                if (!String.IsNullOrEmpty(maquina))
+                if (id != 0)
                 {
-                    list = tb.Extrusoes.Where(x => x.Maquina == maquina).AsEnumerable().ToList();
+                    list = tb.Extrusoes.Where(x => x.Id == id).AsEnumerable().ToList();
                 }
                 else
                 {
