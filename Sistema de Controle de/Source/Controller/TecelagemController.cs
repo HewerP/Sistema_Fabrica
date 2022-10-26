@@ -34,17 +34,26 @@ namespace Sistema_de_Controle_de.Source.Controller
         }
 
         //atualizar ainda n ta feito.
-        public void atualizarTecelagem(int id, string nome, string setor, string turno)
+        public void atualizarTecelagem(int id, string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, string tear, double peso, double metragem, int tela)
         {
             using (var tb = new Nomus_System())
             {
-                var operario = tb.Operarios.Find(id);
+                var tecelagem = tb.Tecelagens.Find(id);
 
-                operario.Nome = nome;
-                operario.Setor = setor;
-                operario.Turno = turno;
+                tecelagem.Data.DataInicio = dataInicio;
+                tecelagem.Data.DataTermino = dataTermino;
+                tecelagem.Data.HorarioEntrada = horarioEntrada;
+                tecelagem.Data.HorarioSaida = horarioSaida;
+                tecelagem.Turno = turno;
+                tecelagem.QuantidadeProduzida = quantidadeProduzida;
+                tecelagem.Material = material;
+                tecelagem.Tear = tear;
+                tecelagem.Peso = peso;
+                tecelagem.Metragem = metragem;
+                tecelagem.Tela = tela;
+                
 
-                tb.Entry(operario).State = EntityState.Modified;
+                tb.Entry(tecelagem).State = EntityState.Modified;
                 tb.SaveChanges();
             }
         }
