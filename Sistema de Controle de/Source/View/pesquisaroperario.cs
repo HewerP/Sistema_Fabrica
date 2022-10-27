@@ -51,5 +51,15 @@ namespace Sistema_de_Controle_de
         {
             this.Close();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            OperarioController operarioController = new OperarioController();
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = operarioController.buscarOperario(textBox1.Text);
+
+            textBox1.Text = "";
+        }
     }
 }

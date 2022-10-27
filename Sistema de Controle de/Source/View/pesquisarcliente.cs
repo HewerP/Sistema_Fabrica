@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_de_Controle_de.Source.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,50 +17,24 @@ namespace Sistema_de_Controle_de
         public pesquisarcliente()
         {
             InitializeComponent();
+            listarCliente();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            ClienteController clienteController = new ClienteController();
 
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = clienteController.buscarCliente(textBox1.Text);
 
+            textBox1.Text = "";
+        }
 
+        private void listarCliente()
+        {
+            ClienteController clienteController = new ClienteController();
 
-
-
-
-            try
-            {
-
-                conn.Open();
-
-                string sql = "SELECT * FROM cad_cliente WHERE NOME_CLIE='" + textBox1.Text + "'";
-
-                using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
-                {
-                    using (DataTable dt = new DataTable())
-                    {
-                        da.Fill(dt);
-                        dataGridView1.DataSource = dt;
-                    }
-                }
-
-
-
-
-
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-
+            dataGridView1.DataSource = clienteController.listarCliente();
         }
     }
 }
