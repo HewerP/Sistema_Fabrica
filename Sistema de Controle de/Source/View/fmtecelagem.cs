@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_de_Controle_de.Source.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Sistema_de_Controle_de
 {
@@ -30,61 +32,43 @@ namespace Sistema_de_Controle_de
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
+            TecelagemController tecelagemController = new TecelagemController();
+            string dataInicio= this.maskedTextBox1.Text; 
+            string dataTermino= "";
+            string horarioEntrada="";
+            string horarioSaida="";
+            char turno= Convert.ToChar(this.comboBox1.Text);
+            double quantidadeProduzida= Convert.ToDouble(this.textBox8.Text);
+            string tear= this.textBox2.Text;
+            double peso= Convert.ToDouble(this.textBox3.Text);
+            double metragem= Convert.ToDouble(this.textBox4.Text);
+            int tela= Convert.ToInt32(this.textBox5.Text);
 
-            string sql = "INSERT INTO cad_tecelagem(ID_OPERA, DATA_TECE, TURNO_TECE, TIPO_MATE,TEAR_TECE,PESO_TECE,METRAGEM,TELA_TECE, GM2,REFUGO) VALUES(@idope,@data,@turno, @tipomate, @tear, @peso, @metragem, @tela,@gm, @refugo)";
+            tecelagemController.inserirTecelagem( dataInicio, dataTermino, horarioEntrada, horarioSaida, turno, quantidadeProduzida, tear, peso, metragem, tela);
 
+            MessageBox.Show("Cadastro efetuado com sucesso");
 
-
-            try
-            {
-                SqlCommand c = new SqlCommand(sql, conn);
-                c.Parameters.Add(new SqlParameter("@idope", this.textBox1.Text));
-                c.Parameters.Add(new SqlParameter("@data", this.maskedTextBox1.Text));
-                c.Parameters.Add(new SqlParameter("@turno", this.comboBox1.Text));
-                c.Parameters.Add(new SqlParameter("@tipomate", this.comboBox2.Text));
-                c.Parameters.Add(new SqlParameter("tear", this.textBox2.Text));
-                c.Parameters.Add(new SqlParameter("@peso", this.textBox3.Text));
-                c.Parameters.Add(new SqlParameter("@metragem", this.textBox4.Text));
-                c.Parameters.Add(new SqlParameter("@tela", this.textBox5.Text));
-                c.Parameters.Add(new SqlParameter("@gm", this.textBox7.Text));
-                c.Parameters.Add(new SqlParameter("@refugo", this.textBox6.Text));
-
-
-                conn.Open();
-
-                c.ExecuteNonQuery();
-
-                conn.Close();
-
-                MessageBox.Show("Cadastro efetuado com sucesso");
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-            textBox1.Text = "";
-            maskedTextBox1.Text = "";
-            comboBox1.Text = "";
-            comboBox2.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox7.Text = "";
-
-
-
-
+            maskedTextBox1.Text="";
+            comboBox1.Text="";
+            textBox8.Text="";
+            textBox2.Text="";
+            textBox3.Text="";
+            textBox4.Text="";
+            textBox5.Text="";
 
         }
 
         private void fmtecelagem_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
         }

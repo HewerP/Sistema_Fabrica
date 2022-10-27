@@ -11,13 +11,13 @@ namespace Sistema_de_Controle_de.Source.Controller
 {
     internal class TecelagemController
     {
-        public void inserirTecelagem(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, string tear, double peso, double metragem, int tela)
+        public void inserirTecelagem(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, string tear, double peso, double metragem, int tela)
         {
             using (var tb = new Nomus_System())
             {
                 Data_Producao data_Producao = new Data_Producao { DataInicio = dataInicio, DataTermino = dataTermino, HorarioEntrada = horarioEntrada, HorarioSaida = horarioSaida };
                 tb.Datas_Producoes.Add(data_Producao);
-                tb.Tecelagens.Add(new Tecelagem(data_Producao, turno, quantidadeProduzida, material, tear, peso, metragem, tela));
+                tb.Tecelagens.Add(new Tecelagem(data_Producao, turno, quantidadeProduzida, tear, peso, metragem, tela));
                 tb.SaveChanges();
             }
         }
@@ -34,7 +34,7 @@ namespace Sistema_de_Controle_de.Source.Controller
         }
 
         //atualizar ainda n ta feito.
-        public void atualizarTecelagem(int id, string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, string tear, double peso, double metragem, int tela)
+        public void atualizarTecelagem(int id, string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, string tear, double peso, double metragem, int tela)
         {
             using (var tb = new Nomus_System())
             {
@@ -46,7 +46,6 @@ namespace Sistema_de_Controle_de.Source.Controller
                 tecelagem.Data.HorarioSaida = horarioSaida;
                 tecelagem.Turno = turno;
                 tecelagem.QuantidadeProduzida = quantidadeProduzida;
-                tecelagem.Material = material;
                 tecelagem.Tear = tear;
                 tecelagem.Peso = peso;
                 tecelagem.Metragem = metragem;

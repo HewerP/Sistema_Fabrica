@@ -82,55 +82,6 @@ namespace Sistema_de_Controle_de
             comboBox2.Text="";
             textBox3.Text="";
 
-            /*SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QNFEHMT\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=nomus2.0");
-
-            string sql = "INSERT INTO cad_extrusora(ID_OPERA, DATA_EXTRU, TURNO_EXTRU, TIPO_MATER,MAQ_EXTRU,VELO_EXTRU,QNT_PRODU,REFUGO_EXTRU) VALUES(@idope,@dataex,@turnoex,@tipomate, @maquina, @velocidade, @qntdproduzida, @refugo)";
-
-
-
-            try
-            {
-                SqlCommand c = new SqlCommand(sql, conn);
-                c.Parameters.Add(new SqlParameter("@idope", this.textBox1.Text)); //ok
-                c.Parameters.Add(new SqlParameter("@dataex", this.maskedTextBox1.Text));  //ok
-                c.Parameters.Add(new SqlParameter("@turnoex", this.comboBox1.Text)); //ok
-                c.Parameters.Add(new SqlParameter("@tipomate", this.comboBox2.Text)); 
-                c.Parameters.Add(new SqlParameter("@maquina", this.comboBox3.Text));  //ok
-                c.Parameters.Add(new SqlParameter("@velocidade", this.textBox4.Text));    //ok
-                c.Parameters.Add(new SqlParameter("@qntdproduzida", this.textBox2.Text)); //ok
-                c.Parameters.Add(new SqlParameter("@refugo", this.textBox3.Text));  //ok
-                
-
-                conn.Open();
-
-                c.ExecuteNonQuery();
-
-                conn.Close();
-
-                MessageBox.Show("Cadastro efetuado com sucesso");
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-            textBox1.Text = "";
-            maskedTextBox1.Text = "";
-            comboBox1.Text = "";
-            comboBox2.Text = "";
-            comboBox3.Text = "";
-            textBox4.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";*/
-
-
-
-
-
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
