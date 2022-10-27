@@ -133,11 +133,15 @@
   <data name="icons8-dedos-de-espuma-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-dedos-de-espuma-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="procurar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\procurar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="02cebc5a1e3443ed83c941a4b53705cd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\02cebc5a1e3443ed83c941a4b53705cd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  
+  <data name="rm309-aew-0013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rm309-aew-0013.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lista-de-reproducao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lista-de-reproducao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +152,17 @@
   <data name="cadeado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cadeado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rm309-aew-0014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rm309-aew-0014.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner_1258-63451" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner_1258-63451.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\fundo-azul-do-gradiente.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rm309-aew-001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rm309-aew-001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="procurar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\procurar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -164,7 +171,10 @@
     <value>..\Resources\fundo-industrial-196297681.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-computer-icons-padlock-advertising-red-circle-5ac56d57b22395.3473021815228880237297" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-computer-icons-padlock-advertising-red-circle-5ac56d57b22395.3473021815228880237297.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\kisspng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Web Designer com Desenho em Códigos Amarelo Minimalista Logo (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fundo-industrial-196297683" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fundo-industrial-196297683.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +182,11 @@
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rm309-aew-0012" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rm309-aew-0012.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="png-clipart-computer-icons-user-icon-design-green-checkmark-with-circle-area-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-clipart-computer-icons-user-icon-design-green-checkmark-with-circle-area-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\png-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Web Designer com Desenho em Códigos Amarelo Minimalista Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +197,8 @@
   <data name="Web Designer com Desenho em Códigos Amarelo Minimalista Logo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rm309-aew-001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rm309-aew-001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Relatorio5-e1515005139868" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Relatorio5-e1515005139868.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +209,12 @@
   <data name="do-utilizador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\do-utilizador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rm309-aew-0011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rm309-aew-0011.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClimateChangeTobacco-nologo-810x405" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ClimateChangeTobacco-nologo-810x405.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fundo-abstrato-azul_1393-3391" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fundo-abstrato-azul_1393-3391.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,11 +224,17 @@
   <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="checklistfacil-tipos-de-industria" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checklistfacil-tipos-de-industria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pesquisa-de-lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pesquisa-de-lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TotalAliveAquaticleech-mobile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TotalAliveAquaticleech-mobile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="industria-4-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\industria-4-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="istockphoto-1162434010-170667a-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\istockphoto-1162434010-170667a-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,8 +242,8 @@
   <data name="industria-pos-pandemia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\industria-pos-pandemia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fundo-industrial-196297682" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fundo-industrial-196297682.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="procurar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\procurar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fundo-industrial-19629768" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fundo-industrial-19629768.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +251,14 @@
   <data name="istockphoto-1162434010-170667a-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\istockphoto-1162434010-170667a-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fundo-industrial-196297682" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundo-industrial-196297682.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pesquisa-de-lupa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pesquisa-de-lupa2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="02cebc5a1e3443ed83c941a4b53705cd-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\02cebc5a1e3443ed83c941a4b53705cd-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,16 +266,16 @@
   <data name="fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Web Designer com Desenho em Códigos Amarelo Minimalista Logo (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="checklistfacil-tipos-de-industria" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checklistfacil-tipos-de-industria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fundo-cinza-pintado-com-textura-de-metal_125540-7791" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fundo-cinza-pintado-com-textura-de-metal_125540-7791.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Web Designer com Desenho em Códigos Amarelo Minimalista Logo (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="procurar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\procurar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Web Designer com Desenho em Códigos Amarelo Minimalista Logo (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -227,6 +227,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Source\Context\Nomus System.cs" />
     <Compile Include="Source\Controller\LaminadoraController.cs" />
     <Compile Include="Source\Controller\ClienteController.cs" />
@@ -282,6 +287,18 @@
     </Compile>
     <Compile Include="Source\View\deleteproducao.Designer.cs">
       <DependentUpon>deleteproducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\View\editarcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\View\editarcliente.designer.cs">
+      <DependentUpon>editarcliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\View\editarproducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\View\editarproducao.designer.cs">
+      <DependentUpon>editarproducao.cs</DependentUpon>
     </Compile>
     <Compile Include="Source\View\editoperario.cs">
       <SubType>Form</SubType>
@@ -367,6 +384,12 @@
     <Compile Include="Source\View\listaproducao.Designer.cs">
       <DependentUpon>listaproducao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\View\pesquisarcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\View\pesquisarcliente.designer.cs">
+      <DependentUpon>pesquisarcliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\View\pesquisaroperario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +398,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\View\pesquisarproducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\View\pesquisarproducao.designer.cs">
+      <DependentUpon>pesquisarproducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\View\removercliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\View\removercliente.designer.cs">
+      <DependentUpon>removercliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\View\removeroperario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +418,12 @@
     </Compile>
     <Compile Include="Sistema_de_Controle_de\DataSet1.cs" />
     <Compile Include="Sistema_de_Controle_de\DataSet1TableAdapters.cs" />
+    <Compile Include="Source\View\removerproducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\View\removerproducao.Designer.cs">
+      <DependentUpon>removerproducao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\View\telainicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -403,6 +444,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Source\View\deleteproducao.resx">
       <DependentUpon>deleteproducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\View\editarcliente.resx">
+      <DependentUpon>editarcliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\View\editarproducao.resx">
+      <DependentUpon>editarproducao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\View\editoperario.resx">
       <DependentUpon>editoperario.cs</DependentUpon>
@@ -446,6 +493,9 @@
     <EmbeddedResource Include="Source\View\listaproducao.resx">
       <DependentUpon>listaproducao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Source\View\pesquisarcliente.resx">
+      <DependentUpon>pesquisarcliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Source\View\pesquisaroperario.resx">
       <DependentUpon>pesquisaroperario.cs</DependentUpon>
     </EmbeddedResource>
@@ -459,8 +509,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Source\View\pesquisarproducao.resx">
+      <DependentUpon>pesquisarproducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\View\removercliente.resx">
+      <DependentUpon>removercliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Source\View\removeroperario.resx">
       <DependentUpon>removeroperario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\View\removerproducao.resx">
+      <DependentUpon>removerproducao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\View\telainicio.resx">
       <DependentUpon>telainicio.cs</DependentUpon>
@@ -479,6 +538,17 @@
     </None>
     <None Include="DataSet2.xss">
       <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -549,6 +619,20 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
+    <None Include="Resources\industria-4-0.png" />
+    <None Include="Resources\fundo-azul-do-gradiente.jpg" />
+    <None Include="Resources\editar.png" />
+    <None Include="Resources\ClimateChangeTobacco-nologo-810x405.png" />
+    <None Include="Resources\rm309-aew-0014.jpg" />
+    <None Include="Resources\rm309-aew-0013.jpg" />
+    <None Include="Resources\rm309-aew-0012.jpg" />
+    <None Include="Resources\rm309-aew-0011.jpg" />
+    <None Include="Resources\png-clipart.png" />
+    <None Include="Resources\kisspng.png" />
+    <None Include="Resources\procurar3.png" />
+    <None Include="Resources\procurar2.png" />
+    <None Include="Resources\procurar1.png" />
+    <None Include="Resources\procurar.png" />
     <None Include="Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo %282%291.png" />
     <None Include="Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo %282%29.png" />
     <None Include="Resources\Web Designer com Desenho em Códigos Amarelo Minimalista Logo.png" />
