@@ -26,7 +26,6 @@ namespace Sistema_de_Controle_de.Source.Context
         public virtual DbSet<Estoque> Estoques { get; set; }
         public virtual DbSet<Movimentacao_Estoque> MovimentacaoEstoques { get; set; }
         public virtual DbSet<Operario> Operarios { get; set; }
-        public virtual DbSet<Producao> Producoes { get; set; }
         public virtual DbSet<Extrusao> Extrusoes { get; set; }
         public virtual DbSet<Laminadora> Laminadoras { get; set; }
         public virtual DbSet<Tecelagem> Tecelagens { get; set; }
