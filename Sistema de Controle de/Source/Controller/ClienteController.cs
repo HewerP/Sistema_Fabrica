@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace Sistema_de_Controle_de.Source.Controller
 {
@@ -63,6 +64,7 @@ namespace Sistema_de_Controle_de.Source.Controller
             {
                 var list = tb.Clientes.ToList();
                 return list;
+                //var l = tb.Clientes.Join(c =&gt c.EnderecoId, e => e.Id, c.EnderecoId = );
             }
         }
 
