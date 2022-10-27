@@ -17,7 +17,7 @@ namespace Sistema_de_Controle_de.Source.Controller
             using (var tb = new Nomus_System())
             {
                 Data_Producao data_Producao = new Data_Producao { DataInicio = dataInicio, DataTermino = dataTermino, HorarioEntrada = horarioEntrada, HorarioSaida = horarioSaida };
-                Ordem_Producao ordem_Producao = new Ordem_Producao(data_Producao, turno, quantidadeProduzida, material, cliente, quantidadeParaProduzir, itemPedido, tela);
+                Ordem_Producao ordem_Producao = new Ordem_Producao(data_Producao, turno, quantidadeProduzida, cliente, quantidadeParaProduzir, itemPedido, tela);
                 //Status_Producao status_Producao = new Status_Producao(ordem_Producao, etapaProducao, inicioEtapa);
                 tb.Datas_Producoes.Add(data_Producao);
                 tb.Ordens_Producao.Add(ordem_Producao);
