@@ -61,7 +61,7 @@ namespace Sistema_de_Controle_de
         {
             ExtrusaoController extrusaoController = new ExtrusaoController();
 
-            string dataInicio = this.textBox1.Text;
+            string dataInicio = this.maskedTextBox1.Text;
             char turno = Convert.ToChar(this.comboBox1.Text);
             double quantidadeProduzida = Convert.ToDouble(this.textBox2.Text);
             double velocidade = Convert.ToDouble(this.textBox4.Text);
