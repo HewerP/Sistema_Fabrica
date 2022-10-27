@@ -14,13 +14,12 @@ namespace Sistema_de_Controle_de.Source.Model
         public double QuantidadeProduzida { get; set; }
         public Estoque Material { get; set; }
 
-        public Producao( Data_Producao data, char turno, double quantidadeProduzida, Estoque material)
+        public Producao( Data_Producao data, char turno, double quantidadeProduzida)
         {
             //this.Id = id;
             this.Data = data;
             this.Turno = turno;
             this.QuantidadeProduzida = quantidadeProduzida;
-            this.Material = material;
         }
     }
 }

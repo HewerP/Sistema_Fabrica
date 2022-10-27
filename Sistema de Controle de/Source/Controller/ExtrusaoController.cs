@@ -12,13 +12,13 @@ namespace Sistema_de_Controle_de.Source.Controller
     internal class ExtrusaoController
     {
         
-        public void inserirExtrusao(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, double velocidade, string maquina, double refugo)
+        public void inserirExtrusao(string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, double velocidade, string maquina, double refugo)
         {
             using (var tb = new Nomus_System())
             {
                 Data_Producao data_Producao = new Data_Producao { DataInicio = dataInicio, DataTermino = dataTermino, HorarioEntrada = horarioEntrada, HorarioSaida = horarioSaida };
                 tb.Datas_Producoes.Add(data_Producao);
-                tb.Extrusoes.Add(new Extrusao(data_Producao, turno, quantidadeProduzida, material, velocidade, maquina, refugo));
+                tb.Extrusoes.Add(new Extrusao(data_Producao, turno, quantidadeProduzida, velocidade, maquina, refugo));
                 tb.SaveChanges();
             }
         }
@@ -35,7 +35,7 @@ namespace Sistema_de_Controle_de.Source.Controller
         }
 
         //atualizar ainda n ta feito.
-        public void atualizarExtrusao(int id, string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, Estoque material, double velocidade, string maquina, double refugo)
+        public void atualizarExtrusao(int id, string dataInicio, string dataTermino, string horarioEntrada, string horarioSaida, char turno, double quantidadeProduzida, double velocidade, string maquina, double refugo)
         {
             using (var tb = new Nomus_System())
             {
@@ -47,7 +47,6 @@ namespace Sistema_de_Controle_de.Source.Controller
                 extrusao.Data.HorarioSaida = horarioSaida;
                 extrusao.Turno = turno;
                 extrusao.QuantidadeProduzida = quantidadeProduzida;
-                extrusao.Material = material;
                 extrusao.Velocidade = velocidade;
                 extrusao.Maquina = maquina;
                 extrusao.Refugo = refugo;
